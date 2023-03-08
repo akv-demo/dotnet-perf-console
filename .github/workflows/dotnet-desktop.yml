@@ -37,8 +37,3 @@ jobs:
       env:
         Configuration: ${{ matrix.configuration }}
 
-    - name: Run the application
-      run: dotnet run -c $env:Configuration
-      env:
-        Configuration: ${{ matrix.configuration }}
-
