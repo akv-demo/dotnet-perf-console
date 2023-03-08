@@ -36,7 +36,6 @@ jobs:
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
       run: dotnet restore
-      env:
 
     - name: Build the application
       run: dotnet build -c $env:Configuration
