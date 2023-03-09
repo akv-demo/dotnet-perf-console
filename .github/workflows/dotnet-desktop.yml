@@ -39,10 +39,11 @@ jobs:
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
       run: |
+        nuget locals all -list
+        dotnet restore -v n
         ls -l ~
         ls -l ~/.nuget
         ls -l ~/.nuget/packages
-        dotnet restore -v n
 
     - name: Build the application
       run: dotnet build -c $env:Configuration
